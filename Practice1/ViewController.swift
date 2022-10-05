@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var label1: UILabel!
     
     let ourDrawSwtich = UISwitch()
+    let ourDrawSwtich2 = UISwitch()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,10 +20,14 @@ class ViewController: UIViewController {
         self.label1.text = "NIL"
         
         //Draw Switch and use #selector
-        self.ourDrawSwtich.frame = CGRect(x: 100, y: 100, width: 0, height: 0)
+        self.ourDrawSwtich.frame = CGRect(x: 100, y: 200, width: 0, height: 0)
         self.view.addSubview(self.ourDrawSwtich)
         self.ourDrawSwtich.addTarget(self, action: #selector(ourSwitchChangeAction(paramTarget:)), for: .valueChanged)
         
+        //Put Switch2 on frame
+        self.ourDrawSwtich2.frame = CGRect.zero
+        self.ourDrawSwtich2.center = self.view.convert(self.view.center, from: self.ourDrawSwtich)
+        self.view.addSubview(self.ourDrawSwtich2)
         
         // Do any additional setup after loading the view.
     }
