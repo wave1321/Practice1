@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         
     }
     
+    //MARK: - Our first func
     func ourAlertOnPracticeFunction (ourAlertTitle: String, ourAlertMessage: String, ourAlertStyle: UIAlertController.Style) {
         
         let actionController = UIAlertController(title: ourAlertTitle, message: ourAlertMessage,
