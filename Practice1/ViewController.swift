@@ -17,7 +17,8 @@ class ViewController: UIViewController {
         self.label1.text = "NIL"
         // Do any additional setup after loading the view.
     }
-
+    
+    //MARK: - Our first action element
     @IBAction func actionButton(_ sender: Any) {
         
         ourAlertOnPracticeFunction(ourAlertTitle: "Alert!", ourAlertMessage: "GO?", ourAlertStyle: .alert)
