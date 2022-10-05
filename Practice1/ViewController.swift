@@ -11,10 +11,16 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var label1: UILabel!
     
+    let ourDrawSwtich = UISwitch()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.label1.text = "NIL"
+        
+        self.ourDrawSwtich.frame = CGRect(x: 100, y: 100, width: 0, height: 0)
+        self.view.addSubview(self.ourDrawSwtich)
+        
         // Do any additional setup after loading the view.
     }
     
