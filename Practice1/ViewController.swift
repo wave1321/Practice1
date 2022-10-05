@@ -18,8 +18,11 @@ class ViewController: UIViewController {
         
         self.label1.text = "NIL"
         
+        //Draw Switch and use #selector
         self.ourDrawSwtich.frame = CGRect(x: 100, y: 100, width: 0, height: 0)
         self.view.addSubview(self.ourDrawSwtich)
+        self.ourDrawSwtich.addTarget(self, action: #selector(ourSwitchChangeAction(paramTarget:)), for: .valueChanged)
+        
         
         // Do any additional setup after loading the view.
     }
@@ -31,7 +34,7 @@ class ViewController: UIViewController {
         
     }
     
-    //MARK: - Our first func
+    //MARK: - Our funcs
     func ourAlertOnPracticeFunction (ourAlertTitle: String, ourAlertMessage: String, ourAlertStyle: UIAlertController.Style) {
         
         let actionController = UIAlertController(title: ourAlertTitle, message: ourAlertMessage,
@@ -42,6 +45,17 @@ class ViewController: UIViewController {
         
         actionController.addAction(actionOnActionController)
         self.present(actionController, animated: true)
+    }
+    
+                // for #selector
+    @objc func ourSwitchChangeAction(paramTarget: UISwitch) {
+       print("We are use - ", paramTarget)
+        
+        if paramTarget.isOn {
+            print("and is on")
+        } else {
+            print("and is off")
+        }
     }
     
     
